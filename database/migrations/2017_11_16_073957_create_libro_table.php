@@ -26,6 +26,7 @@ class CreateLibroTable extends Migration
             $table->integer('id_autor')->unsigned();
             $table->integer('id_categoria')->unsigned();
             $table->integer('id_lugar')->unsigned();
+            $table->integer('id_nivel_academico')->unsigned();
             $table->timestamps();
 
             //foreign keys
@@ -33,6 +34,7 @@ class CreateLibroTable extends Migration
             $table->foreign('id_autor')->references('id_autor')->on('autor');
             $table->foreign('id_categoria')->references('id_categoria')->on('categoria');
             $table->foreign('id_lugar')->references('id_lugar')->on('lugar');    
+            $table->foreign('id_nivel_academico')->references('id_nivel_academico')->on('nivel_academico');
         });
     }
 

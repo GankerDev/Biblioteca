@@ -14,7 +14,7 @@ class CreateNivelAcademicoTable extends Migration
     public function up()
     {
         Schema::create('nivel_academico', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_nivel_academico');
             $table->string('nombre_curso');
             $table->string('nivel_academico');
             $table->timestamps();
